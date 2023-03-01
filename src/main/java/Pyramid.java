@@ -32,10 +32,13 @@ public class Pyramid {
     }
 
     public String stringPyramid(int n, String star) {
+        //base case once we reach 0 just return an empty string
         if (n == 0) {
             return "";
         }
 
+        //if n is not 0 add * to the star string and recursively call stringPyramid
+        //with star concat with a new string and n decremented with star updated as well
         star += "*";
         return star + "\n" + stringPyramid(n - 1, star);
     }
