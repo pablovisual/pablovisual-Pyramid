@@ -27,7 +27,16 @@ public class Pyramid {
      * @param n the size of the pyramid.
      * @return a string representation of the pyramid.
      */
-    public String returnPyramid(int n){
-        return "";
+    public String returnPyramid(int n) {
+        return stringPyramid(n, "");
+    }
+
+    public String stringPyramid(int n, String star) {
+        if (n == 0) {
+            return "";
+        }
+
+        star += "*";
+        return star + "\n" + stringPyramid(n - 1, star);
     }
 }
